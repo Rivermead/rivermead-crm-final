@@ -19,20 +19,19 @@ export default function LeadIntakeForm() {
   const [notes, setNotes] = useState('');
 
   const submitLead = async () => {
-    const { error } = await supabase
-      .from('leads')
-      .insert([
-        {
-          first_name: firstName,
-          middle_name: middleName,
-          last_name: lastName,
-          email,
-          telephone,
-          mobile,
-          claim_type: claimType,
-          notes
-        },
-      ]);
+    const { error } = await supabase.from('leads').insert([
+      {
+        first_name: firstName,
+        middle_name: middleName,
+        last_name: lastName,
+        email,
+        telephone,
+        mobile,
+        claim_type: claimType,
+        notes,
+      },
+    ]);
+
     if (error) {
       alert('Failed to submit lead');
     } else {
@@ -42,7 +41,7 @@ export default function LeadIntakeForm() {
 
   return (
     <div>
-      <h1>New Lead Intake - Rivermead CRM</h1>
+      <h1>New Lead Intake – Rivermead CRM</h1>
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -62,4 +61,5 @@ export default function LeadIntakeForm() {
     </div>
   );
 }
+
 
