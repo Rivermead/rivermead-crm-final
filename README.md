@@ -1,3 +1,3 @@
 # Rivermead CRM
 
-Simple lead intake form for Rivermead Partnership Ltd.
+Simple lead intake form using Next.js and Supabase.
