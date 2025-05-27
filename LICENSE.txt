@@ -1,5 +1,1 @@
-Copyright (c) 2025 The Rivermead Partnership Ltd
-
-All rights reserved.
-
-Unauthorized use, copying, or distribution is prohibited.
+MIT License
